@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResolveThis</title>
+    <meta name="description" content="AI-powered dispute resolution with human review. Trained by judges and barristers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --off-white: #FAFAF8;
+            --charcoal: #1A1A1A;
+            --warm-grey: #6B6560;
+            --accent: #2E5C4F;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--off-white);
+            color: var(--charcoal);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+            animation: fadeUp 1s ease-out both;
+        }
+
+        .logo {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 3.5rem;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.2s forwards;
+        }
+
+        .headline {
+            font-family: 'Newsreader', serif;
+            font-weight: 400;
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            line-height: 1.25;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.5s forwards;
+        }
+
+        .subline {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: var(--warm-grey);
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.8s forwards;
+        }
+
+        .quote {
+            font-family: 'Newsreader', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: var(--warm-grey);
+            margin-top: 3rem;
+            opacity: 0;
+            animation: fadeInOut 6s ease-in-out 2s forwards;
+        }
+
+        .dot {
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            margin: 3rem auto 0;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 1.4s forwards;
+        }
+
+        @keyframes fadeInOut {
+            0%   { opacity: 0; }
+            20%  { opacity: 1; }
+            75%  { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">ResolveThis</div>
+        <h1 class="headline">Law is changing.</h1>
+        <p class="subline">Watch this space.</p>
+        <p class="quote">"It's good to be in something from the ground floor."</p>
+        <span class="dot"></span>
+    </div>
+</body>
+</html>
